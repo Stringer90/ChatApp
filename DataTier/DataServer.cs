@@ -14,37 +14,60 @@ namespace DataTier
         private HashSet<string> Usernames;
         private List<string> Messages;
         private readonly object _usersLock = new object();
-        private readonly object _messagesLockLock = new object();
+        private readonly object _messagesLock = new object();
 
-        static DataServer()
+        public DataServer()
         {
             Usernames = new HashSet<string>();
             Messages = new List<string>();
         }
 
-        List<string> GetUsernames()
+        public HashSet<string> GetUsernames()
         {
-
+            lock (_usersLock)
+            {
+                return new HashSet<string>(Usernames);
+            }
         }
 
-        void AddUser(string pUsername)
+        public void AddUser(string pUsername)
         {
-
+            lock (_usersLock)
+            {
+                Usernames.Add(pUsername);
+            }
         }
 
-        void RemoveUser(string pUsername)
+        public void RemoveUser(string pUsername)
         {
-
+            lock (_usersLock)
+            {
+                Usernames.Remove(pUsername);
+            }
         }
 
-        void AddMessage(string pMessage)
+        public bool UserExists(string pUsername)
         {
-
+            lock (_usersLock)
+            {
+                return Usernames.Contains(pUsername);
+            }
         }
 
-        List<string> GetMessages()
+        public void AddMessage(string pMessage)
         {
+            lock (_messagesLock)
+            {
+                Messages.Add(pMessage);
+            }
+        }
 
+        public List<string> GetMessages()
+        {
+            lock (_messagesLock)
+            {
+                return new List<string>(Messages);
+            }
         }
     }
 }

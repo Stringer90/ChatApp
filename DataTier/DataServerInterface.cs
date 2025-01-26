@@ -7,16 +7,20 @@ using System.Threading.Tasks;
 
 namespace DataTier
 {
+    [ServiceContract]
     public interface DataServerInterface
     {
         [OperationContract]
-        List<string> GetUsernames();
+        HashSet<string> GetUsernames();
 
         [OperationContract]
         void AddUser(string pUsername);
 
         [OperationContract]
         void RemoveUser(string pUsername);
+
+        [OperationContract]
+        bool UserExists(string pUsername);
 
         [OperationContract]
         void AddMessage(string pMessage);

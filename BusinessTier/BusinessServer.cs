@@ -4,6 +4,7 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
+using DataTier;
 
 namespace BusinessTier
 {
@@ -23,35 +24,32 @@ namespace BusinessTier
 
         public bool AddUser(string pUsername)
         {
-
+            if (DataServerService.UserExists(pUsername))
+            {
+                return false;
+            }
+            DataServerService.AddUser(pUsername);
+            return true;
         }
 
-        [OperationContract]
         public void RemoveUser(string pUsername)
         {
-
+            DataServerService.RemoveUser(pUsername);
         }
 
-        [OperationContract]
         public void SendMessage(string pMessage)
         {
-
+            DataServerService.AddMessage(pMessage);
         }
 
-        [OperationContract]
         public List<string> GetMessages()
         {
-
+            return DataServerService.GetMessages();
         }
 
-        [OperationContract]
         public List<string> GetUsers()
         {
-
+            return new List<string>(DataServerService.GetUsernames());
         }
-
-
-
-
     }
 }
