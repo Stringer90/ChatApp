@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Collections.ObjectModel;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,9 +17,18 @@ namespace WPFApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        public ObservableCollection<string> Messages { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = this;
+
+            Messages = new ObservableCollection<string>();
+
         }
+
+
+        
     }
 }

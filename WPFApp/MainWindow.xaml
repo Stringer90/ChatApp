@@ -7,6 +7,40 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <TextBox x:Name="TextInput_Username" HorizontalAlignment="Left" Margin="94,11,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="21,12,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top"/>
+        <Button x:Name="Button_Login" Content="Login" HorizontalAlignment="Left" Margin="21,33,0,0" VerticalAlignment="Top" Width="90"/>
+        <Button x:Name="Button_Logout" Content="Logout" HorizontalAlignment="Left" Margin="124,33,0,0" VerticalAlignment="Top" Width="90" IsEnabled="False"/>
+        <TextBlock x:Name="Text_LoginError" HorizontalAlignment="Left" Margin="21,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="16" Width="193" Foreground="Red"/>
+        <ListBox x:Name="List_Users" HorizontalAlignment="Left" Height="333" Margin="21,79,0,0" VerticalAlignment="Top" Width="193" IsEnabled="False"/>
+        <ListView 
+            x:Name="List_Messages" 
+            HorizontalAlignment="Left" 
+            Height="355" Margin="238,12,0,0" 
+            VerticalAlignment="Top" 
+            Width="538" 
+            Focusable="False" 
+            IsEnabled="False"  
+            ItemsSource="{Binding Messages}">
 
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" 
+                       TextWrapping="Wrap" 
+                       MaxWidth="520"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Focusable" Value="False" />
+                    <Setter Property="IsHitTestVisible" Value="False" />
+                </Style>
+            </ListView.ItemContainerStyle>
+
+        </ListView>
+        <TextBox x:Name="TextInput_Message" HorizontalAlignment="Left" Height="19" Margin="238,372,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="461" IsEnabled="False"/>
+        <Button x:Name="Button_Send" Content="Send" HorizontalAlignment="Left" Height="19" Margin="704,372,0,0" VerticalAlignment="Top" Width="72" IsEnabled="False"/>
+        <TextBlock x:Name="Text_SendError" HorizontalAlignment="Left" Height="16" Margin="238,396,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="538" Foreground="Red"/>
     </Grid>
 </Window>
