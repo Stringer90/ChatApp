@@ -11,7 +11,7 @@ This project is recreating a smaller version of that app (for now) by myself.
 If you read the 'Issues' section below, you will find that this app cannot even execute.
 As an alternative, I can show you the app my group made during an interview, if required.
 
-### Issues
+## Issues
 When I attempt to run the 'WPFApp', I get the following error:
 
 System.Windows.Markup.XamlParseException: ''The invocation of the constructor on type 'WPFApp.MainWindow' that matches the specified binding constraints threw an exception.' Line number '6' and line position '9'.'
