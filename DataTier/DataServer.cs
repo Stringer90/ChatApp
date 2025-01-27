@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DataTier
 {
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, UseSynchronizationContext = false)]
-    public class DataServer
+    public class DataServer : DataServerInterface
     {
         private HashSet<string> Usernames;
         private List<string> Messages;
