@@ -15,7 +15,7 @@ namespace BusinessTier
             ServiceHost host;
             NetTcpBinding tcp = new NetTcpBinding();
             host = new ServiceHost(typeof(BusinessServer));
-            host.AddServiceEndpoint(typeof(BusinessServerInterface), tcp, "net.tcp://0.0.0.0:8200/BusinessServerService");
+            host.AddServiceEndpoint(typeof(BusinessServerInterface), tcp, "net.tcp://localhost:8200/BusinessServerService");
 
             host.Open();
 

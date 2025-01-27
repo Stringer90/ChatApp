@@ -15,7 +15,7 @@ namespace DataTier
             ServiceHost host;
             NetTcpBinding tcp = new NetTcpBinding();
             host = new ServiceHost(typeof(DataServer));
-            host.AddServiceEndpoint(typeof(DataServerInterface), tcp, "net.tcp://0.0.0.0:8100/DataServerService");
+            host.AddServiceEndpoint(typeof(DataServerInterface), tcp, "net.tcp://localhost:8100/DataServerService");
 
             host.Open();
 

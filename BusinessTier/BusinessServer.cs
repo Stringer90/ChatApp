@@ -17,7 +17,7 @@ namespace BusinessTier
         {
             ChannelFactory<DataServerInterface> dataServerFactory;
             NetTcpBinding tcp = new NetTcpBinding();
-            string URL = "net.tcp://0.0.0.0:8100/DataServerService";
+            string URL = "net.tcp://localhost:8100/DataServerService";
             dataServerFactory = new ChannelFactory<DataServerInterface>(tcp, URL);
             DataServerService = dataServerFactory.CreateChannel();
         }
