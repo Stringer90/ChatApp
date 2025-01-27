@@ -18,7 +18,8 @@ System.Windows.Markup.XamlParseException: ''The invocation of the constructor on
 Inner Exception
 BadImageFormatException: Could not load file or assembly 'C:\Users\[name]\source\repos\ChatApp\WPFApp\bin\Debug\net8.0-windows\BusinessTier.exe'. Format of the executable (.exe) or library (.dll) is invalid.
 
-I will fix this issue at another time as currntly, I need to prioritise other things.
+I will fix this issue at another time as I need to prioritise other things.
+Again, I can show you the app my group made during an interview, if required.
 
 ## Functionality
 
