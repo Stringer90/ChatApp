@@ -9,7 +9,7 @@ Originally, I created the same app (with more features) as part of a group in a 
 This project is recreating a smaller version of that app (for now) by myself.
 
 If you read the 'Issues' section below, you will find that this app cannot even execute.
-As an alternative, I can show you the app my group made during an interview, if required.
+As an alternative, I can show you the app our group made during an interview, if required.
 
 ## Issues
 When I attempt to run the 'WPFApp', I get the following error:
