@@ -3,7 +3,7 @@ This is a 3-tier application, with a WPF application as the front-end and 2 cons
 The WPF app is the client tier, the 2 console apps are the business and data tiers.
 These tiers communicate with each other using WCF services, allowing for distributed computing.
 
-The WPF app uses multithreading to constantly update the list of users and the main chat.
+The WPF app uses asynchronous programming and multithreading to constantly update the list of users and the main chat.
 
 Originally, I created the same app (with more features) as part of a group in a university course.
 This project is recreating a smaller version of that app (for now) by myself.
