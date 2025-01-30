@@ -1,5 +1,5 @@
 ## Description
-This is a 3-tier application, with a WPF application as the front-end and 2 console applications as the back-end.
+This is a 3-tier application, with a WPF app as the front-end and 2 console applications as the back-end.
 The WPF app is the client tier, the 2 console apps are the business and data tiers.
 These tiers communicate with each other using WCF services, allowing for distributed computing.
 
