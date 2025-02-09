@@ -14,6 +14,10 @@ This project is recreating a smaller version of that app (for now) by myself.
 - The user can then view the main chat and a list of other users using the app
 - The user can send a message to the main chat
 
+## Demo
+
+![Demo GIF](ChatAppDemo.gif)
+
 ## Note
 
 I had issues with the 'WPFApp' project. It has been replaced with 'WPFClient' (seen as 'Client' in Visual Studio 2022).
