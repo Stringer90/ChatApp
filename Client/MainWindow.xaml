@@ -1,0 +1,15 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="800">
+    <Grid>
+        <TextBlock Text="Username" HorizontalAlignment="Center" Margin="0,124,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UsernameInput" HorizontalAlignment="Center" Margin="0,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="29"/>
+        <Button x:Name="LoginButton" Content="Log in" HorizontalAlignment="Center" Margin="0,238,0,0" VerticalAlignment="Top" Height="38" Width="120" Click="LoginButton_Click"/>
+        <TextBlock x:Name="StatusText" HorizontalAlignment="Center" Margin="0,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
